@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoreBiz Compliance | White-Label Partnership Program</title>
+    <style>
+        :root {
+            --dark-blue: #06152d;
+            --mid-blue: #0c2445;
+            --gold: #d4af37;
+            --light-bg: #f4f7fc;
+            --text-dark: #1e293b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        /* Top Header Navigation */
+        header {
+            background-color: var(--dark-blue);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--gold);
+        }
+        .logo-text { color: white; font-size: 1.5rem; font-weight: bold; }
+        .logo-text span { color: var(--gold); }
+        
+        /* Hero Banner Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--mid-blue) 100%);
+            color: white;
+            padding: 80px 8% 100px 8%;
+            text-align: center;
+        }
+        .hero h1 { font-size: 2.8rem; letter-spacing: 1px; line-height: 1.2; margin-bottom: 20px; }
+        .hero h1 span { color: var(--gold); display: block; font-size: 1.4rem; margin-top: 10px; font-weight: normal; }
+        .hero .tagline { font-size: 1.5rem; color: var(--gold); margin-bottom: 30px; font-weight: 500; }
+        
+        /* Core Value Pillars Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: -40px auto 60px auto;
+            padding: 0 20px;
+        }
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--gold);
+            font-weight: 600;
+        }
+
+        /* Services Grid Section */
+        .services-section { padding: 60px 8%; background-color: white; text-align: center; }
+        .section-title { font-size: 2rem; color: var(--dark-blue); margin-bottom: 40px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--gold); margin: 10px auto 0 auto; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-box {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .service-box:hover { transform: translateY(-5px); }
+        .service-box h3 { color: var(--mid-blue); margin-bottom: 15px; }
+
+        /* Call To Action Buttons */
+        .cta-container { text-align: center; margin: 40px 0; }
+        .btn-cta {
+            background-color: var(--gold);
+            color: var(--dark-blue);
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-cta:hover { background-color: white; transform: scale(1.05); }
+
+        footer { text-align: center; padding: 30px; background: var(--dark-blue); color: #94a3b8; font-size: 0.9rem; border-top: 1px solid #1e293b; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">CoreBiz <span>Compliance</span></div>
+    </header>
+
+    <div class="hero">
+        <h1>WHITE-LABEL PARTNERSHIP PROGRAM</h1>
+        <div class="tagline">Your Clients. Your Brand. Our Backend.</div>
+        <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto;">Your White-Label Compliance & Business Support Partner</p>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">✓ Your Brand, Our Backend</div>
+        <div class="feature-card">✓ No Separate Team Required</div>
+        <div class="feature-card">✓ Additional Revenue Opportunity</div>
+        <div class="feature-card">✓ End-to-End Backend Support</div>
+    </div>
+
+    <div class="services-section">
+        <h2 class="section-title">Services Supported</h2>
+        <div class="services-grid">
+            <div class="service-box">
+                <h3>GST & Taxation</h3>
+                <p>Comprehensive GST registrations, monthly filing operations, and structured corporate ITR compliance tracking.</p>
+            </div>
+            <div class="service-box">
+                <h3>Business Registration</h3>
+                <p>End-to-end setup documentation for Private Limited companies, LLPs, partnerships, and trademark filing protection.</p>
+            </div>
+            <div class="service-box">
+                <h3>Business Support</h3>
+                <p>Complete documentation management, commercial property support parameters, and back-office infrastructure scaling tools.</p>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="mailto:partner@corebiz.com" class="btn-cta">Partner With Us ➔ Reply INTERESTED</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CoreBiz Compliance. Enhanced Backend & Business Support Tools. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
