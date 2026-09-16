@@ -79,21 +79,8 @@
         .service-box:hover { transform: translateY(-5px); }
         .service-box h3 { color: var(--mid-blue); margin-bottom: 15px; }
 
-        /* Call To Action Buttons */
-        .cta-container { text-align: center; margin: 40px 0; }
-        .btn-cta {
-            background-color: var(--gold);
-            color: var(--dark-blue);
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            display: inline-block;
-            transition: 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .btn-cta:hover { background-color: white; transform: scale(1.05); }
+        /* Container adjustment for other sections */
+        .container { padding: 60px 8%; }
 
         footer { text-align: center; padding: 30px; background: var(--dark-blue); color: #94a3b8; font-size: 0.9rem; border-top: 1px solid #1e293b; }
     </style>
@@ -133,12 +120,33 @@
                 <p>Complete documentation management, commercial property support parameters, and back-office infrastructure scaling tools.</p>
             </div>
         </div>
+    </div>
 
-        <div class="cta-container">
-            <a href="mailto:partner@corebiz.com" class="btn-cta">Partner With Us ➔ Reply INTERESTED</a>
+    <!-- WhatsApp Direct Section -->
+    <div id="contact" class="container" style="background-color: #eff6ff; text-align: center;">
+        <h2 class="section-title">Connect Instantly on WhatsApp</h2>
+        <p style="margin-bottom: 30px; color: #475569; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Ready to become a partner? Tap the button below to open a direct chat with our compliance team, or scan the QR code if you are on a desktop.
+        </p>
+        
+        <div style="background: white; max-width: 400px; margin: 0 auto; padding: 40px 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #25d366;">
+            <!-- Mobile Direct Button -->
+            <a href="https://wa.me" 
+               target="_blank" 
+               style="background-color: #25d366; color: white; padding: 14px 30px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; display: inline-block; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;">
+               💬 Chat on WhatsApp
+            </a>
+
+            <!-- Desktop QR Code Instruction Placeholder -->
+            <div style="border-top: 1px solid #e2e8f0; padding-top: 25px;">
+                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 15px;">Desktop users can scan here:</p>
+                <div style="width: 180px; height: 180px; background-color: #f1f5f9; border: 2px dashed #cbd5e1; margin: 0 auto; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                    <span style="color: #94a3b8; font-size: 0.85rem; padding: 10px;">[Insert your WhatsApp QR Code Image Here]</span>
+                </div>
+            </div>
         </div>
     </div>
-   
+
     <footer>
         <p>&copy; 2026 CoreBiz Compliance. Enhanced Backend & Business Support Tools. All rights reserved.</p>
     </footer>
