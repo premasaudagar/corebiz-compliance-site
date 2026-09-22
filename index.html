@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreBiz Compliance | White-Label Partnership Program</title>
+    <!-- Font Awesome Link for Social Media Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         :root {
             --dark-blue: #06152d;
@@ -20,20 +22,29 @@
             color: var(--text-dark);
             background-color: var(--light-bg);
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
         /* Top Header Navigation */
-        header {
-            background-color: var(--dark-blue);
+        nav {
+            background: white;
             padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             border-bottom: 2px solid var(--gold);
         }
-        .logo-text { color: white; font-size: 1.5rem; font-weight: bold; }
+        .logo-text { font-size: 1.5rem; font-weight: bold; color: var(--dark-blue); }
         .logo-text span { color: var(--gold); }
         
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+
         /* Hero Banner Section */
         .hero {
             background: linear-gradient(135deg, var(--dark-blue) 0%, var(--mid-blue) 100%);
@@ -42,7 +53,6 @@
             text-align: center;
         }
         .hero h1 { font-size: 2.8rem; letter-spacing: 1px; line-height: 1.2; margin-bottom: 20px; }
-        .hero h1 span { color: var(--gold); display: block; font-size: 1.4rem; margin-top: 10px; font-weight: normal; }
         .hero .tagline { font-size: 1.5rem; color: var(--gold); margin-bottom: 30px; font-weight: 500; }
         
         /* Core Value Pillars Grid */
@@ -82,14 +92,44 @@
         /* Container adjustment for other sections */
         .container { padding: 60px 8%; }
 
-        footer { text-align: center; padding: 30px; background: var(--dark-blue); color: #94a3b8; font-size: 0.9rem; border-top: 1px solid #1e293b; }
+        /* Footer styling with Social Icons */
+        footer { 
+            text-align: center; 
+            padding: 40px 20px; 
+            background: var(--dark-blue); 
+            color: #94a3b8; 
+            font-size: 0.9rem; 
+            border-top: 1px solid #1e293b; 
+        }
+        .social-links {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-icon {
+            color: #94a3b8;
+            font-size: 1.5rem;
+            transition: color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+        .social-icon:hover {
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
 
-    <header>
+    <nav>
         <div class="logo-text">CoreBiz <span>Compliance</span></div>
-    </header>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <div class="hero">
         <h1>WHITE-LABEL PARTNERSHIP PROGRAM</h1>
@@ -104,7 +144,14 @@
         <div class="feature-card">✓ End-to-End Backend Support</div>
     </div>
 
-    <div class="services-section">
+    <div id="about" class="container">
+        <h2 class="section-title">About the Program</h2>
+        <p style="max-width: 700px; margin: 0 auto; text-align: center; color: #475569;">
+            CoreBiz Compliance helps professionals expand their service portfolio seamlessly. By leveraging our established backend infrastructure, you can deliver comprehensive corporate compliance and business setup strategies directly under your own brand banner.
+        </p>
+    </div>
+
+    <div id="services" class="services-section">
         <h2 class="section-title">Services Supported</h2>
         <div class="services-grid">
             <div class="service-box">
@@ -130,24 +177,34 @@
         </p>
         
         <div style="background: white; max-width: 400px; margin: 0 auto; padding: 40px 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #25d366;">
-            <!-- Mobile Direct Button -->
-            <a href="https://wa.me" 
+            <!-- Mobile Direct Button (Links to new correct tracking URL) -->
+            <a href="https://wa.me/919158022022?text=Hello%20CoreBiz%20Compliance,%0A%0AI%20came%20across%20your%20contact%20and%20would%20like%20to%20know%20more%20about%20your%20business%20support%20and%20compliance%20services.%0A%0APlease%20share%20the%20details.%0A%0AThank%20you" 
                target="_blank" 
                style="background-color: #25d366; color: white; padding: 14px 30px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; display: inline-block; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;">
                💬 Chat on WhatsApp
             </a>
 
-            <!-- Desktop QR Code Display -->
+            <!-- Dynamic Accurate API QR Display Frame -->
             <div style="border-top: 1px solid #e2e8f0; padding-top: 25px;">
                 <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 15px;">Desktop users can scan here:</p>
-                <div style="margin: 0 auto; width: 180px; height: 180px; padding: 10px; background: white; border: 1px solid #cbd5e1; border-radius: 8px;">
-                    <img src="whatsapp-qr.jpg" alt="WhatsApp QR Code" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="margin: 0 auto; width: 180px; height: 180px; padding: 10px; background: white; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <img src="https://qrserver.com" 
+                         alt="WhatsApp QR Code" 
+                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
             </div>
         </div>
     </div>
 
     <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
         <p>&copy; 2026 CoreBiz Compliance. Enhanced Backend & Business Support Tools. All rights reserved.</p>
     </footer>
 
