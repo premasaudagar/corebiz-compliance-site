@@ -95,65 +95,63 @@
 
         /* Footer styling with Social Icons and Quick Links */
         footer { 
-            text-align: center; 
-            padding: 50px 20px; 
-            background-color: var(--dark-blue) !important; 
-            color: #cbd5e1 !important; 
-            font-size: 0.9rem; 
-            border-top: 1px solid #1e293b; 
+            text-align: center !important; 
+            padding: 60px 20px !important; 
+            background-color: #06152d !important; 
+            color: #ffffff !important; 
+            font-size: 0.9rem !important; 
+            border-top: 3px solid var(--gold) !important;
+            display: block !important;
+            clear: both !important;
         }
         .footer-title {
             color: #ffffff !important;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            font-size: 1.2rem !important;
+            margin-bottom: 20px !important;
+            font-weight: bold !important;
+            display: block !important;
         }
         .quick-links {
-            margin: 15px 0 25px 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            font-size: 0.95rem;
-            align-items: center;
+            margin: 15px 0 25px 0 !important;
+            display: flex !important;
+            justify-content: center !important;
+            flex-wrap: wrap !important;
+            gap: 15px !important;
+            font-size: 0.95rem !important;
         }
         .quick-links a {
-            color: #ffffff !important; /* Forces link text to be white and visible */
-            text-decoration: none;
-            transition: color 0.3s;
-            display: inline-block;
+            color: #ffffff !important; 
+            text-decoration: none !important;
+            transition: color 0.3s !important;
         }
         .quick-links a:hover {
             color: var(--gold) !important;
         }
         .footer-divider {
             color: #475569 !important;
-            user-select: none;
-            display: inline-block;
+            user-select: none !important;
         }
         .social-links {
-            margin-bottom: 25px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+            margin-bottom: 25px !important;
+            display: flex !important;
+            justify-content: center !important;
+            gap: 20px !important;
         }
         .social-icon {
             color: #94a3b8 !important;
-            font-size: 1.5rem;
-            transition: color 0.3s, transform 0.3s;
-            text-decoration: none;
+            font-size: 1.5rem !important;
+            text-decoration: none !important;
         }
         .social-icon:hover {
             color: var(--gold) !important;
-            transform: translateY(-3px);
         }
         .copyright {
-            color: #64748b !important;
-            font-size: 0.85rem;
-            margin-top: 15px;
-            border-top: 1px solid #1e293b;
-            padding-top: 20px;
+            color: #94a3b8 !important;
+            font-size: 0.85rem !important;
+            margin-top: 25px !important;
+            border-top: 1px solid #1e293b !important;
+            padding-top: 20px !important;
+            display: block !important;
         }
     </style>
 </head>
@@ -230,6 +228,3 @@
                 <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 15px;">Desktop users can scan here:</p>
                 <div style="margin: 0 auto; width: 180px; height: 180px; padding: 10px; background: white; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me" 
-                         alt="WhatsApp QR Code" 
-                         style="width: 100%; height: 100%; display: block;">
-                </div>
