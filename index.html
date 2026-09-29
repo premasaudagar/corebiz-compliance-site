@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COREBIZ COMPLIANCE | Start Right. Stay Compliant. Grow Confidently.</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #0b2545;
+      --primary-dark: #07192f;
+      --accent: #10b981;
+      --accent-hover: #059669;
+      --accent-light: #ecfdf5;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-600: #475569;
+      --slate-800: #1e293b;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+      --shadow-lg: 0 10px 25px -3px rgba(11, 37, 69, 0.08), 0 4px 6px -4px rgba(11, 37, 69, 0.04);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --transition: all 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--slate-800);
+      background-color: #ffffff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: var(--transition);
+    }
+
+    .btn-accent {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-accent:hover {
+      background-color: var(--accent-hover);
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-white {
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-outline-white:hover {
+      background: #ffffff;
+      color: var(--primary);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: var(--slate-100);
+      color: var(--slate-800);
+    }
+
+    .btn-light:hover {
+      background: var(--slate-200);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--slate-600);
+      max-width: 650px;
+      margin: 0 auto 3rem auto;
+      font-size: 1.05rem;
+    }
+
+    /* --- Header & Navigation --- */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 75px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+    }
+
+    .logo-badge {
+      background: var(--accent);
+      color: white;
+      padding: 0.35rem 0.55rem;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--slate-600);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #16365f 100%);
+      color: #ffffff;
+      padding: 5.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* --- Pillars Section --- */
+    .pillars-bar {
+      background-color: var(--slate-50);
+      border-bottom: 1px solid var(--slate-200);
+      padding: 2.5rem 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .pillar-card {
+      padding: 1.25rem;
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pillar-card i {
+      font-size: 1.75rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* --- Services Section --- */
+    .services-section {
+      padding: 5rem 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .service-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-card p {
+      color: var(--slate-600);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-list {
+      list-style: none;
+      margin-bottom: 1.8rem;
+      flex-grow: 1;
+    }
+
+    .service-list li {
+      position: relative;
+      padding-left: 1.4rem;
+      font-size: 0.9rem;
+      color: var(--slate-600);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .service-card .btn {
+      width: 100%;
+    }
+
+    .disclaimer-text {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--slate-600);
+      margin-top: 2rem;
+      font-style: italic;
+    }
+
+    /* --- 4-Step Framework --- */
+    .framework-section {
+      background: var(--slate-50);
+      padding: 5rem 0;
+    }
+
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .step-card {
+      background: #ffffff;
+      padding: 2rem 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--slate-200);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem auto;
+      font-size: 0.9rem;
+    }
+
+    .step-card h3 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-card p {
+      font-size: 0.9rem;
+      color: var(--slate-600);
+    }
+
+    /* --- Dual Action Section --- */
+    .dual-cta {
+      padding: 5rem 0;
+    }
+
+    .dual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .dual-card {
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .card-startup {
+      background: #ffffff;
+      border: 2px solid var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-growth {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .dual-tag {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .dual-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .card-startup h3 {
+      color: var(--primary);
+    }
+
+    .dual-checklist {
+      list-style: none;
+      margin: 1.5rem 0 2rem 0;
+    }
+
+    .dual-checklist li {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .card-growth .dual-checklist li {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .card-growth .dual-checklist li i {
+      color: var(--accent);
+    }
+
+    .card-startup .dual-checklist li i {
+      color: var(--accent);
+    }
+
+    /* --- Why Choose Us --- */
+    .why-section {
+      background: var(--slate-50);
+      padding: 5rem 0;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .why-card {
+      background: white;
+      padding: 1.8rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .why-card i {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .why-card h4 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .why-card p {
+      font-size: 0.9rem;
+      color: var(--slate-600);
+    }
+
+    /* --- Comparison / Consolidation Banner --- */
+    .consolidation-banner {
+      background: var(--primary-dark);
+      color: #ffffff;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .consolidation-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .badge-pile {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      max-width: 480px;
+      justify-content: center;
+    }
+
+    .badge-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .conversion-arrow {
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    .one-partner-box {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 1rem 2rem;
+      border-radius: var(--radius-md);
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    /* --- Packages --- */
+    .packages-section {
+      padding: 5rem 0;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .package-card {
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 2.2rem 1.8rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .package-card.popular {
+      border: 2px solid var(--accent);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .popular-tag {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.8rem;
+      border-radius: 50px;
+    }
+
+    .package-card h3 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .package-desc {
+      font-size: 0.85rem;
+      color: var(--slate-600);
+      margin-bottom: 1.5rem;
+      min-height: 40px;
+    }
+
+    .package-features {
+      list-style: none;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+
+    .package-features li {
+      font-size: 0.9rem;
+      color: var(--slate-600);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .package-features li i {
+      color: var(--accent);
+      font-size: 0.85rem;
+    }
+
+    /* --- Who We Serve --- */
+    .audience-section {
+      background: var(--slate-50);
+      padding: 4.5rem 0;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .audience-card {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      border: 1px solid var(--slate-200);
+    }
+
+    .audience-card i {
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .audience-card h4 {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .audience-card p {
+      font-size: 0.85rem;
+      color: var(--slate-600);
+    }
+
+    /* --- FAQ Accordion --- */
+    .faq-section {
+      padding: 5rem 0;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 1.2rem 1.5rem;
+      background: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .faq-question i {
+      transition: var(--transition);
+      color: var(--accent);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background: var(--slate-50);
+    }
+
+    .faq-answer p {
+      padding: 1.2rem 1.5rem;
+      font-size: 0.95rem;
+      color: var(--slate-600);
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+    }
+
+    /* --- Call To Action --- */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #ffffff;
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto 2.5rem auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 4.5rem 0 2rem 0;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-brand h3 {
+      color: #ffffff;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links h4, .footer-contact h4 {
+      color: #ffffff;
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-item i {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    /* --- Modal Window --- */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #ffffff;
+      width: 100%;
+      max-width: 500px;
+      border-radius: var(--radius-md);
+      padding: 2.2rem;
+      position: relative;
+      animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--slate-600);
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--primary);
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 2.2rem; }
+      .pillars-grid, .steps-container { grid-template-columns: repeat(2, 1fr); }
+      .dual-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+    }
+
+    @media (max-width: 600px) {
+      .pillars-grid, .steps-container { grid-template-columns: 1fr; }
+      .hero { padding: 3.5rem 0; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="https://wa.me/919158022022?text=Hello%20CoreBiz%20Compliance%2C%20I%20would%20like%20to%20enquire%20about%20your%20business%20and%20compliance%20services?text=Hello%20CoreBiz%20Compliance%2C%20I%20would%20like%20to%20enquire%20about%20your%20business%20and%20compliance%20services" class="logo">
+        <span class="logo-badge"><i class="fa-solid fa-chart-line"></i></span>
+        <span>COREBIZ<span style="color:var(--accent);">.</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#approach">Our Approach</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#faqs">FAQ</a></li>
+      </ul>
+
+      <div>
+        <a href="tel:+919158022022" class="btn btn-accent" aria-label="Call CoreBiz Compliance at +91 91580 22022">
+          <i class="fa-solid fa-phone"></i> +91 91580 22022
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-shield-check"></i> One Business. One Compliance Partner.
+      </div>
+      <h1>Start Right. Stay Compliant.<br>Grow Confidently.</h1>
+      <h2>Your Integrated Business Compliance Partner</h2>
+      <p>
+        From starting your enterprise to managing GST, ITR, trademark protection, property documentation, and workforce statutory compliance — COREBIZ COMPLIANCE unifies critical regulatory responsibilities under one reliable roof.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-accent" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I want to start a business. Please guide me on the registration, GST and compliance requirements.')">
+          <i class="fa-solid fa-rocket"></i> Start Your Business
+        </button>
+        <button class="btn btn-outline-white" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I would like to get a compliance check for my business. Please let me know the details you need from me.')">
+          <i class="fa-solid fa-clipboard-check"></i> Get a Compliance Check
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Pillars Section -->
+  <section class="pillars-bar">
+    <div class="container">
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <i class="fa-solid fa-briefcase"></i>
+          <h4>BUSINESS</h4>
+          <p style="font-size: 0.85rem; color: var(--slate-600);">Structured Foundation</p>
+        </div>
+        <div class="pillar-card">
+          <i class="fa-solid fa-receipt"></i>
+          <h4>TAX</h4>
+          <p style="font-size: 0.85rem; color: var(--slate-600);">Accurate Returns & GST</p>
+        </div>
+        <div class="pillar-card">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <h4>LEGAL</h4>
+          <p style="font-size: 0.85rem; color: var(--slate-600);">Documentation & IP</p>
+        </div>
+        <div class="pillar-card">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h4>COMPLIANCE</h4>
+          <p style="font-size: 0.85rem; color: var(--slate-600);">PF, ESIC & Statutory</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">
+        Everything your enterprise needs to stay legally protected and completely compliant through all phases of growth.
+      </p>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+          <span class="service-tag">Foundation</span>
+          <h3>Start Your Business</h3>
+          <p>Launch your entrepreneurial venture on clear ground with optimal structuring.</p>
+          <ul class="service-list">
+            <li>Proprietorship & Partnership</li>
+            <li>LLP & Private Limited Company</li>
+            <li>GST Registration</li>
+            <li>Udyam / MSME Registration</li>
+            <li>Other statutory business setups</li>
+          </ul>
+          <button class="btn btn-light" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I would like to explore business setup options. Please help me choose the suitable business structure and registrations.')">Explore Business Setup →</button>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+          <span class="service-tag">Finances</span>
+          <h3>Manage Tax & GST</h3>
+          <p>Keep your filings organized and prevent tax-related penalties or late notices.</p>
+          <ul class="service-list">
+            <li>Income Tax Return (ITR) Filing</li>
+            <li>GST Registration & Periodic Returns</li>
+            <li>TDS-Related Filings & Reconciliation</li>
+            <li>Annual Tax Planning & Advisory</li>
+            <li>Notice assistance & compliance review</li>
+          </ul>
+          <button class="btn btn-light" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I would like to explore Tax & GST services. Please share how you can help with my business tax and GST requirements.')">Explore Tax & GST →</button>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-award"></i></div>
+          <span class="service-tag">Intellectual Property</span>
+          <h3>Protect Your Business</h3>
+          <p>Safeguard your hard-earned brand identity, property, and enterprise contracts.</p>
+          <ul class="service-list">
+            <li>Trademark Filing & Objection Coordination</li>
+            <li>Commercial Agreements & NDAs</li>
+            <li>Drafting Legal Contracts</li>
+            <li>Property Documentation Support</li>
+            <li>Conveyancing Assistance</li>
+          </ul>
+          <button class="btn btn-light" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I want to protect my business. Please guide me regarding trademark, agreements, legal contracts and property documentation support.')">Protect Your Business →</button>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-users-gear"></i></div>
+          <span class="service-tag">Human Resources</span>
+          <h3>Employee Compliance</h3>
+          <p>Meet statutory labor responsibilities effortlessly as you build your team.</p>
+          <ul class="service-list">
+            <li>PF (Provident Fund) Registration</li>
+            <li>ESIC Setup & Monthly Return Support</li>
+            <li>Labor Regulation Record Keeping</li>
+            <li>Monthly Employee Statutory Audits</li>
+            <li>Ongoing Advisory & Liaison</li>
+          </ul>
+          <button class="btn btn-light" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I would like to enquire about PF & ESIC compliance for my employees. Please guide me on the requirements and process.')">Enquire About PF & ESIC →</button>
+        </div>
+      </div>
+
+      <p class="disclaimer-text">
+        *Services are provided and coordinated according to the applicable professional requirements and scope of work.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4-Step Framework -->
+  <section class="framework-section" id="approach">
+    <div class="container">
+      <h2 class="section-title">The COREBIZ 4-Step Approach</h2>
+      <p class="section-subtitle">A proven methodology to eliminate regulatory ambiguity.</p>
+      
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>START</h3>
+          <p>Build the right corporate legal foundation from day one with the correct incorporation structure.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>SECURE</h3>
+          <p>Protect your brand name with trademarks, establish enforceable contracts, and secure property interests.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>COMPLY</h3>
+          <p>Timely filing of tax, GST, TDS, and employee statutory contributions like PF and ESIC.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>GROW</h3>
+          <p>Confidently scale operations with uninterrupted visibility and proactive regulatory alerts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual Cards (Starting vs Running) -->
+  <section class="dual-cta">
+    <div class="container">
+      <div class="dual-grid">
+        <!-- New Business -->
+        <div class="dual-card card-startup">
+          <span class="dual-tag">Starting a Business?</span>
+          <h3>Don't start with paperwork. Start with a plan.</h3>
+          <p style="color:var(--slate-600);">Before registering, know what applies to your business to avoid costly adjustments later:</p>
+          <ul class="dual-checklist">
+            <li><i class="fa-solid fa-check"></i> Determining the most tax-efficient structure</li>
+            <li><i class="fa-solid fa-check"></i> Necessary statutory registrations (GST, MSME)</li>
+            <li><i class="fa-solid fa-check"></i> Immediate brand and trademark safeguards</li>
+            <li><i class="fa-solid fa-check"></i> Estimated annual compliance schedule</li>
+          </ul>
+          <button class="btn btn-accent" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I would like to book a startup consultation. Please guide me on the business setup roadmap and required compliances.')">Book a Startup Consultation</button>
+        </div>
+
+        <!-- Existing Business -->
+        <div class="dual-card card-growth">
+          <span class="dual-tag" style="color: #6ee7b7;">Already Running?</span>
+          <h3>Your business is growing. Is your compliance keeping up?</h3>
+          <p style="color: rgba(255,255,255,0.8);">Avoid unforeseen penalties and operational bottlenecks as operations scale:</p>
+          <ul class="dual-checklist">
+            <li><i class="fa-solid fa-check"></i> Full audit of GST, ITR & TDS adherence</li>
+            <li><i class="fa-solid fa-check"></i> Verification of PF & ESIC threshold requirements</li>
+            <li><i class="fa-solid fa-check"></i> Review of partner agreements & intellectual property</li>
+            <li><i class="fa-solid fa-check"></i> Comprehensive gap analysis report</li>
+          </ul>
+          <button class="btn btn-accent" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I would like to request a compliance check for my existing business. Please guide me on the process.')">Request a Compliance Check</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consolidation Banner -->
+  <section class="consolidation-banner">
+    <div class="container">
+      <h2 style="font-size: 2rem;">One Business. Multiple Requirements. One Partner.</h2>
+      <p style="color: rgba(255,255,255,0.7); margin-top: 0.5rem;">Stop coordinating across multiple consultants, agents, and platforms.</p>
+      
+      <div class="consolidation-grid">
+        <div class="badge-pile">
+          <span class="badge-item">Company Incorporation</span>
+          <span class="badge-item">GST Filings</span>
+          <span class="badge-item">ITR & TDS</span>
+          <span class="badge-item">Trademark Registration</span>
+          <span class="badge-item">PF & ESIC</span>
+          <span class="badge-item">Agreements & Legal Drafting</span>
+        </div>
+
+        <div class="conversion-arrow">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+        <div class="one-partner-box">
+          <i class="fa-solid fa-check-double"></i> COREBIZ COMPLIANCE
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-section">
+    <div class="container">
+      <h2 class="section-title">Why COREBIZ?</h2>
+      <p class="section-subtitle">Built to give enterprise founders peace of mind.</p>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <i class="fa-solid fa-crosshairs"></i>
+          <h4>Single Contact Point</h4>
+          <p>Avoid managing multiple disjointed service providers and distinct points of failure.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-headset"></i>
+          <h4>Personalized Support</h4>
+          <p>Communicate directly with human specialists who know your business specifics inside out.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-eye"></i>
+          <h4>Transparent Process</h4>
+          <p>Clear documentation checklists, scope of work, and upfront pricing before any commitments.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-bell"></i>
+          <h4>Proactive Approach</h4>
+          <p>Get alerted well in advance of upcoming deadlines rather than dealing with last-minute stress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Packages -->
+  <section class="packages-section" id="packages">
+    <div class="container">
+      <h2 class="section-title">Our Business Packages</h2>
+      <p class="section-subtitle">Tailored scopes designed to match the current phase of your operations.</p>
+
+      <div class="packages-grid">
+        <!-- Package 1 -->
+        <div class="package-card">
+          <h3>Business Starter</h3>
+          <p class="package-desc">For individuals planning to launch their inaugural enterprise.</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> Business Structure Registration</li>
+            <li><i class="fa-solid fa-check"></i> GST Registration</li>
+            <li><i class="fa-solid fa-check"></i> Udyam / MSME Certificate</li>
+            <li><i class="fa-solid fa-check"></i> Basic Compliance Roadmap</li>
+          </ul>
+          <button class="btn btn-light" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I would like to get started with the Business Starter package. Please share the details, scope and next steps.')">Get Started →</button>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="package-card popular">
+          <span class="popular-tag">MOST POPULAR</span>
+          <h3>Business Launch</h3>
+          <p class="package-desc">For founders needing incorporation with comprehensive brand protection.</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> Company / LLP Incorporation</li>
+            <li><i class="fa-solid fa-check"></i> GST & MSME Setup</li>
+            <li><i class="fa-solid fa-check"></i> Trademark Application Support</li>
+            <li><i class="fa-solid fa-check"></i> Standard Operating Contracts</li>
+            <li><i class="fa-solid fa-check"></i> First-Year Compliance Roadmap</li>
+          </ul>
+          <button class="btn btn-accent" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I would like to enquire about the Business Launch package. Please share the scope, pricing and next steps.')">Enquire Now →</button>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="package-card">
+          <h3>Business Compliance</h3>
+          <p class="package-desc">For running businesses looking to streamline periodic filings.</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> Periodic GST Returns</li>
+            <li><i class="fa-solid fa-check"></i> Income Tax & TDS Filings</li>
+            <li><i class="fa-solid fa-check"></i> PF & ESIC Contribution Records</li>
+            <li><i class="fa-solid fa-check"></i> Tailored Compliance Calendar</li>
+          </ul>
+          <button class="btn btn-light" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I would like to discuss the scope of the Business Compliance package. Please share the details.')">Discuss Scope →</button>
+        </div>
+
+        <!-- Package 4 -->
+        <div class="package-card">
+          <h3>Business Care</h3>
+          <p class="package-desc">Full-spectrum recurring management across tax, legal & documentation.</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> End-to-end Tax & GST Filings</li>
+            <li><i class="fa-solid fa-check"></i> Full Employee Statutory Care</li>
+            <li><i class="fa-solid fa-check"></i> Trademark & IP Oversight</li>
+            <li><i class="fa-solid fa-check"></i> Contract & Conveyancing Review</li>
+            <li><i class="fa-solid fa-check"></i> Dedicated Manager Support</li>
+          </ul>
+          <button class="btn btn-light" onclick="openWhatsApp('Hello COREBIZ COMPLIANCE, I would like to talk to your team about the Business Care package. Please share the details and next steps.')">Talk to COREBIZ →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audience Section -->
+  <section class="audience-section">
+    <div class="container">
+      <h2 class="section-title">Who We Serve</h2>
+      <p class="section-subtitle">From ambitious individuals to scaling enterprises.</p>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h4>Entrepreneurs</h4>
+          <p>Planning their first business setup.</p>
+        </div>
+        <div class="audience-card">
+          <i class="fa-solid fa-rocket"></i>
+          <h4>Startups</h4>
+          <p>Building high-growth foundations.</p>
+        </div>
+        <div class="audience-card">
+          <i class="fa-solid fa-shop"></i>
+          <h4>SMEs</h4>
+          <p>Seeking dependable, structured compliance.</p>
+        </div>
+        <div class="audience-card">
+          <i class="fa-solid fa-user-tie"></i>
+          <h4>Professionals</h4>
+          <p>Consultants & specialized service firms.</p>
+        </div>
+        <div class="audience-card">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <h4>Growing Co.</h4>
+          <p>Managing tax, GST and expanding teams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faqs">
+    <div class="container faq-container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Answers to common questions about our services.</p>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you only help new businesses?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>No. COREBIZ supports both new entrepreneurs setting up their foundation and established businesses looking to streamline recurring statutory filings.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I use COREBIZ if I already have a CA?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. COREBIZ regularly provides support for needs outside your existing arrangement—such as Trademark registrations, PF/ESIC handling, or documentation review.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you provide only one-time services?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We provide both one-time setup services (such as incorporation or trademark filings) and ongoing recurring retainers for monthly GST, PF/ESIC, and annual tax management.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can you help me understand what registrations my business needs?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. We can review your business model, projected turnover, and location to provide a customized roadmap of required statutory registrations.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you provide legal and property services?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>COREBIZ coordinates property conveyancing and legal documentation within the applicable scope. Where a matter requires a designated legal specialist, we coordinate with the relevant credentialed counsel.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can you handle PF & ESIC for my employees?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we offer ongoing PF/ESIC statutory support, registration, monthly statement filings, and records maintenance based on your company size.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Your business deserves more than a registration number.</h2>
+      <p>Partner with an integrated compliance ally so you can dedicate your energy to growth.</p>
+      <div class="cta-buttons">
+        <a href="tel:+919158022022" class="btn btn-primary"><i class="fas fa-phone"></i> +91 91580 22022</a>
+        <a href="https://wa.me/919158022022?text=Hello%20CoreBiz%20Compliance%2C%20I%20would%20like%20to%20enquire%20about%20your%20business%20and%20compliance%20services" target="_blank" class="btn btn-outline-white">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>COREBIZ COMPLIANCE</h3>
+          <p style="margin-bottom: 1rem;">Business | Tax | Legal | Compliance</p>
+          <p style="font-size: 0.85rem; line-height: 1.6;">
+            Start Right. Stay Compliant. Grow Confidently.<br>
+            Your all-in-one partner for company setup, statutory filings, intellectual property, and documentation.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#approach">4-Step Approach</a></li>
+            <li><a href="#packages">Pricing Packages</a></li>
+            <li><a href="#faqs">Frequently Asked Questions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 91580 22022</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contact@corebizcompliance.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Pune, Maharashtra</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp Support Active</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 COREBIZ COMPLIANCE. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lead Capture Modal -->
+  <div class="modal" id="contactModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <h3 style="color:var(--primary); margin-bottom: 0.5rem;" id="modalTitle">Get in Touch</h3>
+      <p style="font-size: 0.85rem; color: var(--slate-600); margin-bottom: 1.5rem;">
+        Fill out your details below and a COREBIZ advisor will connect with you.
+      </p>
+
+      <form id="leadForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone / WhatsApp Number</label>
+          <input type="tel" id="phone" required placeholder="+91 98765 43210">
+        </div>
+        <div class="form-group">
+          <label for="serviceInterest">Service of Interest</label>
+          <select id="serviceInterest">
+            <option value="Startup Consultation">Startup Consultation</option>
+            <option value="Existing Compliance Check">Existing Business Compliance Check</option>
+            <option value="GST & Tax Filings">GST & Tax Filings</option>
+            <option value="Trademark & Legal">Trademark & Documentation</option>
+            <option value="PF & ESIC Compliance">PF & ESIC Compliance</option>
+            <option value="Package Enquiry">Business Package Plan</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 0.5rem;">
+          Submit Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // FAQ Accordion Behavior
+    document.querySelectorAll('.faq-question').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        // Close other items
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+        // Toggle clicked item
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Modal Handlers
+    const modal = document.getElementById('contactModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const serviceSelect = document.getElementById('serviceInterest');
+
+    function openModal(serviceName = 'Get in Touch') {
+      modal.classList.add('active');
+      modalTitle.innerText = serviceName;
+      
+      // Auto-select relevant dropdown value if matched
+      if (serviceName.includes('Startup')) {
+        serviceSelect.value = 'Startup Consultation';
+      } else if (serviceName.includes('Check') || serviceName.includes('Existing')) {
+        serviceSelect.value = 'Existing Compliance Check';
+      } else if (serviceName.includes('Tax')) {
+        serviceSelect.value = 'GST & Tax Filings';
+      } else if (serviceName.includes('Package')) {
+        serviceSelect.value = 'Package Enquiry';
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+    }
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    function openWhatsApp(message) {
+  const phone = '919158022022';
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+
+function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your request has been received. Our team will reach out shortly.');
+      closeModal();
+      document.getElementById('leadForm').reset();
+    }
+  </script>
+</body>
+</html>
